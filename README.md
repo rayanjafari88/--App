@@ -2,6 +2,8 @@
 
 An Islamic companion app built with React Native and Expo.
 
+**🌐 Website:** [rayanjafari88.github.io/--App](https://rayanjafari88.github.io/--App/) — screenshots and a full tour of the app.
+
 > ذَكِّرْ فَإِنَّ الذِّكْرَى تَنْفَعُ الْمُؤْمِنِينَ
 
 ## Features
