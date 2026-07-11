@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>صِلِ — رفيقك للصلاة والذكر</title>
+  <meta name="description" content="صِلِ — تطبيق إسلامي لمواقيت الصلاة المحسوبة فلكياً، اتجاه القبلة بالبوصلة، والأذكار اليومية. يعمل بدون إنترنت." />
+  <meta property="og:title" content="صِلِ — رفيقك للصلاة والذكر" />
+  <meta property="og:description" content="مواقيت الصلاة · اتجاه القبلة · الأذكار · آيات قصيرة — بتصميم كلاسيكي أنيق" />
+  <meta property="og:image" content="assets/home.png" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🕌</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- خلفية النجوم -->
+  <canvas id="stars" aria-hidden="true"></canvas>
+
+  <!-- شريط التنقل -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="logo">صِلِ</a>
+      <div class="nav-links">
+        <a href="#features">المزايا</a>
+        <a href="#screens">لقطات</a>
+        <a href="#how">كيف يعمل</a>
+        <a href="https://github.com/rayanjafari88/--App" target="_blank" rel="noopener" class="nav-github">GitHub ↗</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ الواجهة ============ -->
+  <header class="hero" id="top">
+    <div class="compass-bg" aria-hidden="true">
+      <svg viewBox="0 0 200 200" class="compass-rose">
+        <g fill="none" stroke="currentColor" stroke-width="0.6">
+          <circle cx="100" cy="100" r="96" />
+          <circle cx="100" cy="100" r="70" stroke-dasharray="2 4" />
+          <path d="M100 8 L106 94 L100 100 L94 94 Z" fill="currentColor" opacity="0.8"/>
+          <path d="M100 192 L106 106 L100 100 L94 106 Z" fill="currentColor" opacity="0.35"/>
+          <path d="M8 100 L94 94 L100 100 L94 106 Z" fill="currentColor" opacity="0.35"/>
+          <path d="M192 100 L106 94 L100 100 L106 106 Z" fill="currentColor" opacity="0.35"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-verse reveal">ذَكِّرْ فَإِنَّ الذِّكْرَى تَنْفَعُ الْمُؤْمِنِينَ</p>
+        <h1 class="hero-title reveal"><span class="shimmer">صِلِ</span></h1>
+        <p class="hero-sub reveal">رفيقك اليومي للصلاة والذكر — مواقيت محسوبة فلكياً،<br />بوصلة قبلة حيّة، وأذكار بين يديك. <strong>بدون إنترنت.</strong></p>
+        <div class="hero-cta reveal">
+          <a href="#features" class="btn btn-gold">اكتشف التطبيق</a>
+          <a href="https://github.com/rayanjafari88/--App" target="_blank" rel="noopener" class="btn btn-ghost">الشيفرة المصدرية</a>
+        </div>
+        <div class="hero-stats reveal">
+          <div><span class="num">٥</span><span class="lbl">صلوات بمواقيت دقيقة</span></div>
+          <div><span class="num">٢٠</span><span class="lbl">ذكراً صباحياً ومسائياً</span></div>
+          <div><span class="num">١٥</span><span class="lbl">آية قصيرة تنير يومك</span></div>
+          <div><span class="num">٨</span><span class="lbl">مدن سعودية</span></div>
+        </div>
+      </div>
+
+      <div class="hero-phone reveal" id="heroPhone">
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <img src="assets/home.png" alt="الشاشة الرئيسية — مواقيت الصلاة والعد التنازلي" />
+        </div>
+        <div class="phone-glow" aria-hidden="true"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ المزايا ============ -->
+  <main>
+    <section class="section" id="features">
+      <h2 class="section-title reveal">تطبيقٌ واحد… <span class="gold">لكل يومك</span></h2>
+      <p class="section-lead reveal">صُمّم صِلِ ليكون بسيطاً وهادئاً — كل شيء يُحسب على جهازك، ولا شيء يحتاج اتصالاً.</p>
+
+      <div class="feature">
+        <div class="feature-text reveal">
+          <span class="feature-tag">المواقيت</span>
+          <h3>مواقيت تُحسب فلكياً — لا تُجلب من الإنترنت</h3>
+          <p>يحسب صِلِ أوقات الصلوات الخمس على جهازك مباشرة بطريقة <strong>أم القرى</strong> المعتمدة في المملكة، مع عدّ تنازلي حيّ للصلاة القادمة والتاريخ الهجري. سافرْ أو انقطع اتصالك — المواقيت معك دائماً.</p>
+        </div>
+        <div class="feature-phone reveal">
+          <div class="phone sm"><div class="phone-notch"></div><img src="assets/home.png" alt="مواقيت الصلاة" loading="lazy" /></div>
+        </div>
+      </div>
+
+      <div class="feature rev">
+        <div class="feature-text reveal">
+          <span class="feature-tag">القبلة</span>
+          <h3>بوصلة حيّة تدلك على مكة</h3>
+          <p>بوصلة تدور مع حركة هاتفك عبر <strong>مستشعر المغناطيسية</strong>، وسهم يثبت على اتجاه الكعبة أينما درت — مع زاوية الاتجاه بالدرجات والمسافة إلى مكة المكرمة بالكيلومترات.</p>
+        </div>
+        <div class="feature-phone reveal">
+          <div class="phone sm"><div class="phone-notch"></div><img src="assets/qibla.png" alt="بوصلة القبلة" loading="lazy" /></div>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-text reveal">
+          <span class="feature-tag">الأذكار</span>
+          <h3>أذكارك الصباحية والمسائية… بعدّاد</h3>
+          <p>اختر أذكار الصباح أو المساء، ثم اضغط على البطاقة لعدّ التكرار — تتوهج البطاقة ذهبياً عند إتمام العدد الموصى به. عشرون ذكراً من الأذكار الصحيحة الثابتة.</p>
+        </div>
+        <div class="feature-phone reveal">
+          <div class="phone sm"><div class="phone-notch"></div><img src="assets/counter.png" alt="عداد الأذكار" loading="lazy" /></div>
+        </div>
+      </div>
+
+      <div class="feature rev">
+        <div class="feature-text reveal">
+          <span class="feature-tag">لا تهجر</span>
+          <h3>آية اليوم… وآيات لا تُنسى</h3>
+          <p>ركن «لا تهجر» يقدّم آية مختارة كل يوم وخمس عشرة آية قصيرة تبقيك على صلة يومية بالقرآن، مع إمكانية مشاركة أي آية بلمسة واحدة.</p>
+        </div>
+        <div class="feature-phone reveal">
+          <div class="phone sm"><div class="phone-notch"></div><img src="assets/verses.png" alt="آيات قصيرة" loading="lazy" /></div>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-text reveal">
+          <span class="feature-tag">الإعدادات</span>
+          <h3>مدينتك… وكل شيء يتبعها</h3>
+          <p>اختر مدينتك من ثماني مدن سعودية فتتحدّث المواقيت والقبلة والمسافة في كل التطبيق فوراً — ويحفظ صِلِ اختيارك على جهازك فلا تعيد ضبطه أبداً.</p>
+        </div>
+        <div class="feature-phone reveal">
+          <div class="phone sm"><div class="phone-notch"></div><img src="assets/settings.png" alt="الإعدادات" loading="lazy" /></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ لقطات ============ -->
+    <section class="section screens" id="screens">
+      <h2 class="section-title reveal">من داخل <span class="gold">التطبيق</span></h2>
+      <div class="screens-row">
+        <div class="phone tilt reveal"><div class="phone-notch"></div><img src="assets/adhkar.png" alt="اختيار الأذكار" loading="lazy" /></div>
+        <div class="phone tilt lead reveal"><div class="phone-notch"></div><img src="assets/home.png" alt="الرئيسية" loading="lazy" /></div>
+        <div class="phone tilt reveal"><div class="phone-notch"></div><img src="assets/qibla.png" alt="القبلة" loading="lazy" /></div>
+      </div>
+    </section>
+
+    <!-- ============ كيف يعمل ============ -->
+    <section class="section" id="how">
+      <h2 class="section-title reveal">كيف يعمل <span class="gold">صِلِ</span>؟</h2>
+      <div class="how-grid">
+        <div class="how-card reveal">
+          <span class="how-ico">☀</span>
+          <h3>حسابٌ فلكي</h3>
+          <p>موقع الشمس لموقعك وتاريخك يحدد المواقيت بدقة — رياضيات خالصة تعمل على الجهاز، بطريقة أم القرى.</p>
+        </div>
+        <div class="how-card reveal">
+          <span class="how-ico">🧭</span>
+          <h3>مستشعر حقيقي</h3>
+          <p>مستشعر المجال المغناطيسي في هاتفك يحدد اتجاهك لحظياً، ويحسب التطبيق زاوية الكعبة من موقعك.</p>
+        </div>
+        <div class="how-card reveal">
+          <span class="how-ico">🔒</span>
+          <h3>خصوصية كاملة</h3>
+          <p>لا حسابات، لا تتبع، لا خوادم. بياناتك واختياراتك تبقى على جهازك — ويعمل التطبيق كاملاً دون إنترنت.</p>
+        </div>
+      </div>
+      <div class="tech reveal">
+        <span>بُني بـ</span>
+        <div class="tech-chips"><span>React Native</span><span>Expo</span><span>adhan</span><span>خط أميري</span></div>
+      </div>
+    </section>
+
+    <!-- ============ الخاتمة ============ -->
+    <section class="section cta-final">
+      <p class="cta-verse reveal">أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ</p>
+      <div class="hero-cta reveal">
+        <a href="https://github.com/rayanjafari88/--App" target="_blank" rel="noopener" class="btn btn-gold">تصفّح المشروع على GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>صِلِ ١٫٠ — صُنع بمحبة · <a href="https://rayanjafari88.github.io/Rayan-Portfolio/" target="_blank" rel="noopener">ريان علي جعفري</a></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
