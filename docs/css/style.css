@@ -79,7 +79,7 @@ body {
 }
 .hero-title { line-height: 1; margin-bottom: 18px; }
 .hero-title .shimmer {
-  font-family: var(--serif); font-weight: 700; font-size: clamp(5rem, 14vw, 9rem);
+  font-family: var(--serif); font-weight: 700; font-size: clamp(3.2rem, 8vw, 5.5rem);
   background: linear-gradient(100deg, var(--gold) 20%, #f6e7bd 40%, var(--gold) 60%);
   background-size: 220% auto;
   -webkit-background-clip: text; background-clip: text; color: transparent;
