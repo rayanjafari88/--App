@@ -14,11 +14,50 @@ const observer = new IntersectionObserver(
 );
 document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
-// Nav border on scroll
+// Nav border, reading progress and back-to-top on scroll
 const nav = document.getElementById('nav');
+const progress = document.getElementById('scrollProgress');
+const toTop = document.getElementById('toTop');
 window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 30);
+  const y = window.scrollY;
+  nav.classList.toggle('scrolled', y > 30);
+  if (progress) {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
+  }
+  if (toTop) toTop.hidden = y < 600;
 }, { passive: true });
+if (toTop) toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+// Mobile menu
+const burger = document.getElementById('navBurger');
+const mobileMenu = document.getElementById('mobileMenu');
+if (burger && mobileMenu) {
+  burger.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'إغلاق القائمة' : 'فتح القائمة');
+  });
+  mobileMenu.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') {
+      mobileMenu.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+
+// Spotlight that follows the cursor on cards
+if (window.matchMedia('(pointer: fine)').matches) {
+  document.querySelectorAll('.how-card, .times-widget, .faq-item').forEach((card) => {
+    card.addEventListener('pointermove', (e) => {
+      const r = card.getBoundingClientRect();
+      card.style.setProperty('--mx', `${e.clientX - r.left}px`);
+      card.style.setProperty('--my', `${e.clientY - r.top}px`);
+    });
+  });
+}
 
 // Subtle parallax tilt on the hero phone
 const heroPhone = document.getElementById('heroPhone');
